@@ -25,6 +25,16 @@ $('#add-pet').on('click', function() {
 
   // Attach new element to page
   $('#posted-pets').append($newPet);
+
+  // Make "x" button remove section
+  $('.close').on('click', function() {
+    $(this).parent().remove();
+  });
+
+  // Reset form fields
+  $name.val("");
+  $species.val("Dog");
+  $notes.val("");
 });
 
 // Puppy images fade in
